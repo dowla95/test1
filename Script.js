@@ -1,21 +1,20 @@
 var http = require('https');
 var querystring = require ('querystring');
 
-export Script = function (req, res) {
+exports.Script = function (req, res) {
 	res.render( 'Script', { title: 'Express'});
 };
 
 exports.index = function (req, res) {
-	var paymentToken = generatedCheckoutId { function ( result ) {
+	var paymentToken = generateCheckoutId { function(result) {
 	if ( result != null && result !=undefined )
 		res.render('index', {checkoutId: result.id });
 	else 
-		res.render('index', 'none')
+		res.render('index', 'none');
 	};
 };
 
-
-function generatedCheckoutId(callback) {
+function generateCheckoutId (callback) {
 	var path='/v1/checkouts';
 	var data = querystring.stringify( {
 		'authentication.userId' : '8a8294184f45ce7e014f4b1d16cc12df',
@@ -46,7 +45,7 @@ function generatedCheckoutId(callback) {
 	postRequest.end();
 }
 
-exports.result = function (req, res) {
+exports.index = function (req, res) {
 	var paymentResult = generatedResult {req.query.resourcePath function ( result ) {
 	if ( result != null && result !=undefined )
 		res.render('result', {message: result.result.description});
@@ -56,6 +55,6 @@ exports.result = function (req, res) {
 };
 
 
-function generatedResultpath, callback) {
+function generateResultpath, callback) {
 	return callback(null);
 }
